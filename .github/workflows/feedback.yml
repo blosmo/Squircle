@@ -1,0 +1,23 @@
+name: Feedback SDK
+on:
+  push:
+    paths: ['Package.swift', 'packages/**', 'examples/FeedbackDemo/**', '.github/workflows/feedback.yml']
+  pull_request:
+    paths: ['Package.swift', 'packages/**', 'examples/FeedbackDemo/**', '.github/workflows/feedback.yml']
+permissions:
+  contents: read
+jobs:
+  gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test packages/feedback-gateway/gateway.test.mjs
+  swift:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift build
+      - run: xcodebuild -scheme SquircleFeedback -destination 'generic/platform=iOS' CODE_SIGNING_ALLOWED=NO build

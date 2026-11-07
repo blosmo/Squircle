@@ -16,3 +16,10 @@ xcuserdata/
 *.xcarchive/
 *.dSYM/
 client*.json
+
+# Feedback SDK and gateway local state.
+.build/
+.swiftpm/
+private/
+feedback.config.json
+examples/FeedbackDemo/FeedbackDemo.xcodeproj/

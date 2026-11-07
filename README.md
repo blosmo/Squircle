@@ -1,5 +1,10 @@
 # Squircle
 
+This fork adds **Squircle Feedback**, an embeddable iOS and JavaScript SDK that
+sends customer reports directly to your app’s coding agent.
+[Install the SDK and gateway](docs/customer-feedback.md).
+
+
 Build and iterate on iOS apps from your iPhone. Squircle is a native UIKit
 iPhone client for your own, unmodified [T3 Code](https://github.com/pingdotgg/t3code)
 server, plus a small Rust service on the Mac. T3 owns the coding agents,

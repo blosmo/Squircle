@@ -1,0 +1,9 @@
+{
+  "host": "127.0.0.1",
+  "port": 8787,
+  "database": "./private/feedback.sqlite",
+  "squircleURL": "http://127.0.0.1:3847",
+  "apps": {
+    "my-app": { "project": "YOUR_T3_PROJECT_ID", "mode": "implement" }
+  }
+}

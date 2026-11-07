@@ -1,0 +1,20 @@
+name: FeedbackDemo
+options:
+  bundleIdPrefix: dev.squircle
+packages:
+  SquircleFeedback:
+    path: ../..
+targets:
+  FeedbackDemo:
+    type: application
+    platform: iOS
+    deploymentTarget: '16.0'
+    sources: [Sources]
+    dependencies:
+      - package: SquircleFeedback
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.squircle.feedback-demo
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        SWIFT_VERSION: '6.0'
